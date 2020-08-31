@@ -1,0 +1,24 @@
+.checkbox-adjustment {
+  margin-top: 10px;
+}
+
+.badge {
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: antiquewhite;
+}
+
+.badge.weak {
+  background-color: #ffdd57;
+}
+
+.badge.medium {
+  color: white;
+  background-color: #3298dc;
+}
+
+.badge.strong {
+  color: white;
+  background-color: #48c774;
+}
