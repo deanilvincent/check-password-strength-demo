@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-const passwordStrength = require('check-password-strength')
+import { Component, OnInit } from '@angular/core';
+import passwordStrength from 'check-password-strength'
 
 // model
 export class PasswordStrength {
