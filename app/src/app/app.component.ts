@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import passwordStrength from 'check-password-strength'
+import { passwordStrength } from 'check-password-strength'
 
 // model
 export class PasswordStrength {
@@ -62,6 +62,9 @@ export class AppComponent implements OnInit {
   badgeConditions() {
     if (this.passwordStrengthValue.id === 'undefined') {
       return "badge"
+    }
+    if (this.passwordStrengthValue.value === "Too weak") {
+      return "badge light"
     }
     if (this.passwordStrengthValue.value === "Weak") {
       return "badge weak"
