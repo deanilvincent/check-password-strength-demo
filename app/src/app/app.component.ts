@@ -3,7 +3,7 @@ import { passwordStrength } from 'check-password-strength'
 
 // model
 export class PasswordStrength {
-  id: string;
+  id: number;
   value: string;
   length: number;
   contains: string
@@ -17,7 +17,7 @@ export class PasswordStrength {
 export class AppComponent implements OnInit {
   title = 'app';
   passwordStrengthValue: PasswordStrength = {
-    id: "undefined",
+    id: 0,
     value: "",
     length: 0,
     contains: "[]"
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
       this.passwordStrengthValue.contains = JSON.stringify(strength.contains)
     } else {
       this.passwordStrengthValue = {
-        id: "undefined",
+        id: 0,
         value: "",
         length: 0,
         contains: "[]"
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
   }
 
   badgeConditions() {
-    if (this.passwordStrengthValue.id === 'undefined') {
+    if (!this.passwordStrengthValue.id) {
       return "badge"
     }
     if (this.passwordStrengthValue.value === "Too weak") {
